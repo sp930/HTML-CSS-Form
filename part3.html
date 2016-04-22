@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			fieldset     {background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width: 720px;}
+			.lblMain     {width: 180px; display: inline-block; text-align: right; vertical-align: top;}
+			.lblRadioChx {width: auto;}
+			.lblRange1   {text-align: center; background-color: red; vertical-align: top; color: white;}
+			.lblRange2   {text-align: center; background-color: purple; vertical-align: top; color: white;}
+			.inputRange  {text-align: center;}
+			textarea     {width: 360px; height: 50px;}
+			label:hover  {font-size:20px;}
+			input:hover  {font-size:20px;}
+			select:hover {font-size:20px;}
+		</style>
+		<title>Dating Website</title>
+		<meta name="author" content="Snehal Patel">
+	</head>
+	<body>
+		<div>
+			<h1>Please Enter Your Details For Our Dating Website!</h1>
+		</div>
+		<div>
+			<form method="post" enctype="multipart/form-data" 
+      			  action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+				<fieldset>
+						<legend>Your Face</legend>
+						<label for="fileToUpload" class="lblMain">Your Image: </label>
+						<input type="file" id="fileToUpload" name="fileToUpload" required> <br>
+						<label for="preview" class="lblMain">Image preview: </label> 
+						<img src="" id="preview" width="300px">
+				</fieldset>
+				<fieldset>
+						<legend>Your general details</legend>
+						<label for="name" class="lblMain">Name: </label>
+						<input type="text" id="name" name="name" placeholder="Your full name" required> <br>
+						<label class="lblMain">Gender: </label>
+						<input type="radio" id="male" name="gender" value="male" required><label for="male" class="lblRadioChx"> Male </label>
+						<input type="radio" id="female" name="gender" value="female" required><label for="female" class="lblRadioChx"> Female </label><br>
+						<label for="age" class="lblMain">Age: </label>
+						<input type="number" id="age" name="age" min="18" max="100" value="18" required> <br>
+						<label for="dateOfBirth" class="lblMain">Date Of Birth: </label>
+						<input type="date" id="dateOfBirth" name="dateOfBirth"> <br>
+						<label for="favoriteColor" class="lblMain">Favorite Color: </label>
+						<input type="color" id="favoriteColor" name="favoriteColor"> <br>
+						<label for="country" class="lblMain">Which country: </label>
+						<select id="country" name="country">
+							<option value="noSelection"></option>
+  							<option value="USA">United States</option>
+  							<option value="Cananda">Cananda</option>
+  							<option value="Mexico">Mexico</option>
+  							<option value="Brazil">Brazil</option>
+  							<option value="India">India</option>
+						</select>
+				</fieldset>
+				<fieldset>
+						<legend>Your Indicators</legend>
+						<label for="height" class="lblMain">Height: </label>
+						<label class="lblRange1">Short</label><input type="range" min="0" max="100" id="height" name="height" min="0" max="100"><label class="lblRange2">Tall</label><br>
+						<label for="salary" class="lblMain">Salary: </label>
+						<label class="lblRange1">Poor</label><input type="range" min="0" max="100" id="salary" name="salary" min="0" max="100"><label class="lblRange2">Rich</label></p>
+				</fieldset>
+				<fieldset>
+						<legend>Your Contact Information</legend>
+						<label for="email" class="lblMain">Email: </label>
+						<input type="email" id="email" name="email" required> <br>
+						<label for="mobile" class="lblMain">Mobile: </label>
+						<input type="tel" id="mobile" name="mobile"> <br>
+						<label for="address" class="lblMain">Address: </label>
+						<textarea id="address" name="address"></textarea> <br>
+						<label class="lblMain">Method to contact you: </label>
+						<input type="checkbox" id="chxEmail" name="chxEmail" value="Email"><label for="chxEmail" class="lblRadioChx"> Email </label>
+						<input type="checkbox" id="chxWhatsapp" name="chxWhatsapp" value="Whatsapp" class="lblRadioChx"><label for="chxWhatsapp"> Whatsapp </label>
+						<input type="checkbox" id="chxInAppChat" name="chxInAppChat" value="In-appchat" class="lblRadioChx"><label for="chxInAppChat"> In-app chat </label>
+				</fieldset>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>		
+	</body>
+</html>
